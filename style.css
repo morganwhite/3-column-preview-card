@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+  font-size: 15px;
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  min-width: 22rem;
+  max-width: 96rem;
+}
+
+.cars {
+  min-width: 22rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.car {
+  padding-left: 3.33rem;
+}
+
+.sedan {
+  background-color: var(--bright-orange);
+  border-top-left-radius: 0.53rem;
+  border-top-right-radius: 0.53rem;
+}
+
+.sedan > img {
+  margin-top: 3.33rem;
+  margin-bottom: 2.33rem;
+}
+
+.suv {
+  background-color: var(--dark-cyan);
+}
+
+.suv > img {
+  margin-top: 3.33rem;
+  margin-bottom: 2.33rem;
+}
+
+.luxury {
+  background-color: var(--very-dark-cyan);
+  border-bottom-left-radius: 0.53rem;
+  border-bottom-right-radius: 0.53rem;
+}
+
+.luxury > img {
+  margin-top: 3.33rem;
+  margin-bottom: 2.33rem;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2.67rem;
+  color: var(--very-light-gray);
+  margin-bottom: 1.67rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.67rem;
+  color: var(--transparent-white);
+  max-width: 15.33rem;
+  margin-bottom: 1.67rem;
+}
+
+.more {
+  display: inline-block;
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.67rem;
+  background-color: var(--very-light-gray);
+  padding: 15px 30px;
+  border-radius: 28px;
+  margin-bottom: 3.33rem;
+  text-decoration: none;
+}
+
+.more:active {
+  border: 2px solid var(--very-light-gray);
+}
+
+.sedan > .more {
+  color: var(--bright-orange);
+}
+
+.sedan > .more:active {
+  background-color: var(--bright-orange);
+  color: var(--very-light-gray);
+}
+
+.suv > .more {
+  color: var(--dark-cyan);
+}
+
+.suv > .more:active {
+  background-color: var(--dark-cyan);
+  color: var(--very-light-gray);
+}
+
+.luxury > .more {
+  color: var(--very-dark-cyan);
+}
+
+.luxury > .more:active {
+  background-color: var(--very-dark-cyan);
+  color: var(--very-light-gray);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 40rem) {
+  body {
+    height: 100vh;
+  }
+  .cars {
+    flex-direction: row;
+  }
+
+  .car {
+    width: 20rem;
+    padding-right: 3rem;
+  }
+
+  .sedan {
+    border-radius: 0.53rem 0 0 0.53rem;
+  }
+
+  .luxury {
+    border-radius: 0 0.53rem 0.53rem 0;
+  }
+}
